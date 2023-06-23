@@ -27,6 +27,7 @@ dependencies:
       - name: theforeman.foreman
   system: |
     git-core [platform:rpm]
+    gcc [platform:rpm compile]
     python3.9-devel [platform:rpm compile]
     libcurl-devel [platform:rpm compile]
     krb5-devel [platform:rpm compile]
