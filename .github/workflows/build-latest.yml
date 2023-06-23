@@ -30,7 +30,7 @@ jobs:
         env:
           DOCKER_BUILDKIT: 1
         run: |
-          tox -e docker -- --tag=quay.io/ansible/awx-ee:latest
+          tox -e docker -- --tag="${{ secrets.QUAY_REPO }}":latest
 
       - name: Push images
         run: |
