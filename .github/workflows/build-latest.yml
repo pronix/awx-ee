@@ -34,4 +34,4 @@ jobs:
       - name: Push images
         run: |
          echo "${{ secrets.QUAY_TOKEN }}" | docker login quay.io -u ${{ secrets.QUAY_USERNAME }} --password-stdin
-         docker push quay.io/ansible/awx-ee:latest
+         docker push "${{ secrets.QUAY_REPO }}":latest
